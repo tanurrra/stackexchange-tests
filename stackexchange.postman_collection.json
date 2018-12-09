@@ -406,6 +406,9 @@
 							"",
 							"tests[\"Status code is 200\"] = responseCode.code === 200;",
 							"",
+							"// Load the JSON Schema",
+							"const schema = JSON.parse(environment.schema_questions-by-id-answers);",
+							"",
 							"pm.test('Schema Validation', function() {",
 							"    ",
 							"    var result=tv4.validateResult(JSON.parse(responseBody), schema);",
@@ -428,11 +431,7 @@
 					"script": {
 						"id": "7076f6fe-d0de-4abb-8b06-56489c8688d4",
 						"exec": [
-							"schema={}\r",
-							" \r",
-							"pm.sendRequest(\"answers-on-questions_schema.json\", function (err, response) {\r",
-							"    schema=response.json()\r",
-							"});"
+							""
 						],
 						"type": "text/javascript"
 					}
@@ -529,7 +528,7 @@
 						"exec": [
 							"schema={}\r",
 							" \r",
-							"pm.sendRequest(\"questions-by-id_schema.json\", function (err, response) {\r",
+							"pm.sendRequest(\"https://github.com/tanurrra/stackexchange-tests/blob/master/questions-by-id_schema.json\", function (err, response) {\r",
 							"    schema=response.json()\r",
 							"});"
 						],
@@ -635,7 +634,7 @@
 						"exec": [
 							"schema={}\r",
 							" \r",
-							"pm.sendRequest(\"comments-on-questions_schema.json\", function (err, response) {\r",
+							"pm.sendRequest(\"https://github.com/tanurrra/stackexchange-tests/blob/master/comments-on-questions_schema.json\", function (err, response) {\r",
 							"    schema=response.json()\r",
 							"});"
 						],
@@ -702,7 +701,4 @@
 					]
 				}
 			},
-			"response": []
-		}
-	]
-}
+			"response",Cþ‡6kÐÅµ
