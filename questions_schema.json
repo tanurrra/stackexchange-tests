@@ -1,0 +1,240 @@
+  1 {
+ 14     "items": {
+ 15       "$id": "#/properties/items",
+ 16       "type": "array",
+ 17       "title": "The Items Schema",
+ 18       "items": {
+ 19         "$id": "#/properties/items/items",
+ 20         "type": "object",
+ 21         "title": "The Items Schema",
+ 22         "required": [
+ 23           "tags",
+ 24           "owner",
+ 25           "is_answered",
+ 26           "view_count",
+ 27           "answer_count",
+ 28           "score",
+ 29           "last_activity_date",
+ 30           "creation_date",
+ 31           "last_edit_date",
+ 32           "question_id",
+ 33           "link",
+ 34           "title"
+ 35         ],
+ 36         "properties": {
+ 37           "tags": {
+ 38             "$id": "#/properties/items/items/properties/tags",
+ 39             "type": "array",
+ 40             "title": "The Tags Schema",
+ 41             "items": {
+ 42               "$id": "#/properties/items/items/properties/tags/items",
+ 43               "type": "string",
+ 44               "title": "The Items Schema",
+ 45               "default": "",
+ 46               "examples": [
+ 47                 "python",
+ 48                 "json",
+ 49                 "lambda",
+ 50                 "grafana",
+ 51                 "simplejson"
+ 52               ],
+ 53               "pattern": "^(.*)$"
+ 54             }
+ 55           },
+ 56           "owner": {
+ 57             "$id": "#/properties/items/items/properties/owner",
+ 58             "type": "object",
+ 59             "title": "The Owner Schema",
+ 60             "required": [
+ 61               "reputation",
+ 62               "user_id",
+ 63               "user_type",
+ 64               "profile_image",
+ 65               "display_name",
+ 66               "link"
+ 67             ],
+ 68             "properties": {
+ 69               "reputation": {
+ 70                 "$id": "#/properties/items/items/properties/owner/properties/reputation",
+ 71                 "type": "integer",
+ 72                 "title": "The Reputation Schema",
+ 73                 "default": 0,
+ 74                 "examples": [
+ 75                   6
+ 76                 ]
+ 77               },
+ 78               "user_id": {
+ 79                 "$id": "#/properties/items/items/properties/owner/properties/user_id",
+ 80                 "type": "integer",
+ 81                 "title": "The User_id Schema",
+ 82                 "default": 0,
+ 83                 "examples": [
+ 84                   10649121
+ 85                 ]
+ 86               },
+ 87               "user_type": {
+ 88                 "$id": "#/properties/items/items/properties/owner/properties/user_type",
+ 89                 "type": "string",
+ 90                 "title": "The User_type Schema",
+ 91                 "default": "",
+ 92                 "examples": [
+ 93                   "registered"
+ 94                 ],
+ 95                 "pattern": "^(.*)$"
+ 96               },
+ 97               "profile_image": {
+ 98                 "$id": "#/properties/items/items/properties/owner/properties/profile_image",
+ 99                 "type": "string",
+100                 "title": "The Profile_image Schema",
+101                 "default": "",
+102                 "examples": [
+103                   "https://lh4.googleusercontent.com/-etHOGg1pakc/AAAAAAAAAAI/AAAAAAAAAAA/ABtNlbBfUOM70ggjST3Ei9Zqf6bykYEjFw/mo/photo.jpg?sz=128"
+104                 ],
+105                 "pattern": "^(.*)$"
+106               },
+107               "display_name": {
+108                 "$id": "#/properties/items/items/properties/owner/properties/display_name",
+109                 "type": "string",
+110                 "title": "The Display_name Schema",
+111                 "default": "",
+112                 "examples": [
+113                   "rohit rocckz"
+114                 ],
+115                 "pattern": "^(.*)$"
+116               },
+117               "link": {
+118                 "$id": "#/properties/items/items/properties/owner/properties/link",
+119                 "type": "string",
+120                 "title": "The Link Schema",
+121                 "default": "",
+122                 "examples": [
+123                   "https://stackoverflow.com/users/10649121/rohit-rocckz"
+124                 ],
+125                 "pattern": "^(.*)$"
+126               }
+127             }
+128           },
+129           "is_answered": {
+130             "$id": "#/properties/items/items/properties/is_answered",
+131             "type": "boolean",
+132             "title": "The Is_answered Schema",
+133             "default": false,
+134             "examples": [
+135               false
+136             ]
+137           },
+138           "view_count": {
+139             "$id": "#/properties/items/items/properties/view_count",
+140             "type": "integer",
+141             "title": "The View_count Schema",
+142             "default": 0,
+143             "examples": [
+144               39
+145             ]
+146           },
+147           "answer_count": {
+148             "$id": "#/properties/items/items/properties/answer_count",
+149             "type": "integer",
+150             "title": "The Answer_count Schema",
+151             "default": 0,
+152             "examples": [
+153               1
+154             ]
+155           },
+156           "score": {
+157             "$id": "#/properties/items/items/properties/score",
+158             "type": "integer",
+159             "title": "The Score Schema",
+160             "default": 0,
+161             "examples": [
+162               1
+163             ]
+164           },
+165           "last_activity_date": {
+166             "$id": "#/properties/items/items/properties/last_activity_date",
+167             "type": "integer",
+168             "title": "The Last_activity_date Schema",
+169             "default": 0,
+170             "examples": [
+171               1544358287
+172             ]
+173           },
+174           "creation_date": {
+175             "$id": "#/properties/items/items/properties/creation_date",
+176             "type": "integer",
+177             "title": "The Creation_date Schema",
+178             "default": 0,
+179             "examples": [
+180               1544292286
+181             ]
+182           },
+183           "last_edit_date": {
+184             "$id": "#/properties/items/items/properties/last_edit_date",
+185             "type": "integer",
+186             "title": "The Last_edit_date Schema",
+187             "default": 0,
+188             "examples": [
+189               1544358287
+190             ]
+191           },
+192           "question_id": {
+193             "$id": "#/properties/items/items/properties/question_id",
+194             "type": "integer",
+195             "title": "The Question_id Schema",
+196             "default": 0,
+197             "examples": [
+198               53685423
+199             ]
+200           },
+201           "link": {
+202             "$id": "#/properties/items/items/properties/link",
+203             "type": "string",
+204             "title": "The Link Schema",
+205             "default": "",
+206             "examples": [
+207               "https://stackoverflow.com/questions/53685423/how-to-convert-or-manipulate-my-columns-and-rows-to-grafana-expected-json-format"
+208             ],
+209             "pattern": "^(.*)$"
+210           },
+211           "title": {
+212             "$id": "#/properties/items/items/properties/title",
+213             "type": "string",
+214             "title": "The Title Schema",
+215             "default": "",
+216             "examples": [
+217               "How to convert or manipulate my columns and rows to grafana expected json format in python"
+218             ],
+219             "pattern": "^(.*)$"
+220           }
+221         }
+222       }
+223     },
+224     "has_more": {
+225       "$id": "#/properties/has_more",
+226       "type": "boolean",
+227       "title": "The Has_more Schema",
+228       "default": false,
+229       "examples": [
+230         true
+231       ]
+232     },
+233     "quota_max": {
+234       "$id": "#/properties/quota_max",
+235       "type": "integer",
+236       "title": "The Quota_max Schema",
+237       "default": 0,
+238       "examples": [
+239         10000
+240       ]
+241     },
+242     "quota_remaining": {
+243       "$id": "#/properties/quota_remaining",
+244       "type": "integer",
+245       "title": "The Quota_remaining Schema",
+246       "default": 0,
+247       "examples": [
+248         9893
+249       ]
+250     }
+2
+252 }

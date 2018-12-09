@@ -1,0 +1,282 @@
+  1 {
+  2   "definitions": {},
+  3   "$schema": "http://json-schema.org/draft-07/schema#",
+  4   "$id": "http://example.com/root.json",
+  5   "type": "object",
+  6   "title": "The Root Schema",
+  7   "required": [
+  8     "items",
+  9     "has_more",
+ 10     "quota_max",
+ 11     "quota_remaining"
+ 12   ],
+ 13   "properties": {
+ 14     "items": {
+ 15       "$id": "#/properties/items",
+ 16       "type": "array",
+ 17       "title": "The Items Schema",
+ 18       "items": {
+ 19         "$id": "#/properties/items/items",
+ 20         "type": "object",
+ 21         "title": "The Items Schema",
+ 22         "required": [
+ 23           "tags",
+ 24           "owner",
+ 25           "is_answered",
+ 26           "view_count",
+ 27           "closed_date",
+ 28           "accepted_answer_id",
+ 29           "answer_count",
+ 30           "score",
+ 31           "last_activity_date",
+ 32           "creation_date",
+ 33           "last_edit_date",
+ 34           "question_id",
+ 35           "link",
+ 36           "closed_reason",
+ 37           "title"
+ 38         ],
+ 39         "properties": {
+ 40           "tags": {
+ 41             "$id": "#/properties/items/items/properties/tags",
+ 42             "type": "array",
+ 43             "title": "The Tags Schema",
+ 44             "items": {
+ 45               "$id": "#/properties/items/items/properties/tags/items",
+ 46               "type": "string",
+ 47               "title": "The Items Schema",
+ 48               "default": "",
+ 49               "examples": [
+ 50                 "java",
+ 51                 "statistics",
+ 52                 "random",
+ 53                 "probability"
+ 54               ],
+ 55               "pattern": "^(.*)$"
+ 56             }
+ 57           },
+ 58           "owner": {
+ 59             "$id": "#/properties/items/items/properties/owner",
+ 60             "type": "object",
+ 61             "title": "The Owner Schema",
+ 62             "required": [
+ 63               "reputation",
+ 64               "user_id",
+ 65               "user_type",
+ 66               "profile_image",
+ 67               "display_name",
+ 68               "link"
+ 69             ],
+ 70             "properties": {
+ 71               "reputation": {
+ 72                 "$id": "#/properties/items/items/properties/owner/properties/reputation",
+ 73                 "type": "integer",
+ 74                 "title": "The Reputation Schema",
+ 75                 "default": 0,
+ 76                 "examples": [
+ 77                   11512
+ 78                 ]
+ 79               },
+ 80               "user_id": {
+ 81                 "$id": "#/properties/items/items/properties/owner/properties/user_id",
+ 82                 "type": "integer",
+ 83                 "title": "The User_id Schema",
+ 84                 "default": 0,
+ 85                 "examples": [
+ 86                   17335
+ 87                 ]
+ 88               },
+ 89               "user_type": {
+ 90                 "$id": "#/properties/items/items/properties/owner/properties/user_type",
+ 91                 "type": "string",
+ 92                 "title": "The User_type Schema",
+ 93                 "default": "",
+ 94                 "examples": [
+ 95                   "registered"
+ 96                 ],
+ 97                 "pattern": "^(.*)$"
+ 98               },
+ 99               "profile_image": {
+100                 "$id": "#/properties/items/items/properties/owner/properties/profile_image",
+101                 "type": "string",
+102                 "title": "The Profile_image Schema",
+103                 "default": "",
+104                 "examples": [
+105                   "https://www.gravatar.com/avatar/f39e9d15c74b40c7c4110b9beb47dd92?s=128&d=identicon&r=PG"
+106                 ],
+107                 "pattern": "^(.*)$"
+108               },
+109               "display_name": {
+110                 "$id": "#/properties/items/items/properties/owner/properties/display_name",
+111                 "type": "string",
+112                 "title": "The Display_name Schema",
+113                 "default": "",
+114                 "examples": [
+115                   "Chii"
+116                 ],
+117                 "pattern": "^(.*)$"
+118               },
+119               "link": {
+120                 "$id": "#/properties/items/items/properties/owner/properties/link",
+121                 "type": "string",
+122                 "title": "The Link Schema",
+123                 "default": "",
+124                 "examples": [
+125                   "https://stackoverflow.com/users/17335/chii"
+126                 ],
+127                 "pattern": "^(.*)$"
+128               }
+129             }
+130           },
+131           "is_answered": {
+132             "$id": "#/properties/items/items/properties/is_answered",
+133             "type": "boolean",
+134             "title": "The Is_answered Schema",
+135             "default": false,
+136             "examples": [
+137               true
+138             ]
+139           },
+140           "view_count": {
+141             "$id": "#/properties/items/items/properties/view_count",
+142             "type": "integer",
+143             "title": "The View_count Schema",
+144             "default": 0,
+145             "examples": [
+146               765
+147             ]
+148           },
+149           "closed_date": {
+150             "$id": "#/properties/items/items/properties/closed_date",
+151             "type": "integer",
+152             "title": "The Closed_date Schema",
+153             "default": 0,
+154             "examples": [
+155               1496994164
+156             ]
+157           },
+158           "accepted_answer_id": {
+159             "$id": "#/properties/items/items/properties/accepted_answer_id",
+160             "type": "integer",
+161             "title": "The Accepted_answer_id Schema",
+162             "default": 0,
+163             "examples": [
+164               127132
+165             ]
+166           },
+167           "answer_count": {
+168             "$id": "#/properties/items/items/properties/answer_count",
+169             "type": "integer",
+170             "title": "The Answer_count Schema",
+171             "default": 0,
+172             "examples": [
+173               3
+174             ]
+175           },
+176           "score": {
+177             "$id": "#/properties/items/items/properties/score",
+178             "type": "integer",
+179             "title": "The Score Schema",
+180             "default": 0,
+181             "examples": [
+182               0
+183             ]
+184           },
+185           "last_activity_date": {
+186             "$id": "#/properties/items/items/properties/last_activity_date",
+187             "type": "integer",
+188             "title": "The Last_activity_date Schema",
+189             "default": 0,
+190             "examples": [
+191               1362467984
+192             ]
+193           },
+194           "creation_date": {
+195             "$id": "#/properties/items/items/properties/creation_date",
+196             "type": "integer",
+197             "title": "The Creation_date Schema",
+198             "default": 0,
+199             "examples": [
+200               1222256701
+201             ]
+202           },
+203           "last_edit_date": {
+204             "$id": "#/properties/items/items/properties/last_edit_date",
+205             "type": "integer",
+206             "title": "The Last_edit_date Schema",
+207             "default": 0,
+208             "examples": [
+209               1223186226
+210             ]
+211           },
+212           "question_id": {
+213             "$id": "#/properties/items/items/properties/question_id",
+214             "type": "integer",
+215             "title": "The Question_id Schema",
+216             "default": 0,
+217             "examples": [
+218               126656
+219             ]
+220           },
+221           "link": {
+222             "$id": "#/properties/items/items/properties/link",
+223             "type": "string",
+224             "title": "The Link Schema",
+225             "default": "",
+226             "examples": [
+227               "https://stackoverflow.com/questions/126656/opensource-implementation-of-the-alias-method"
+228             ],
+229             "pattern": "^(.*)$"
+230           },
+231           "closed_reason": {
+232             "$id": "#/properties/items/items/properties/closed_reason",
+233             "type": "string",
+234             "title": "The Closed_reason Schema",
+235             "default": "",
+236             "examples": [
+237               "off-topic"
+238             ],
+239             "pattern": "^(.*)$"
+240           },
+241           "title": {
+242             "$id": "#/properties/items/items/properties/title",
+243             "type": "string",
+244             "title": "The Title Schema",
+245             "default": "",
+246             "examples": [
+247               "Opensource Implementation of the Alias Method"
+248             ],
+249             "pattern": "^(.*)$"
+250           }
+251         }
+252       }
+253     },
+254     "has_more": {
+255       "$id": "#/properties/has_more",
+256       "type": "boolean",
+257       "title": "The Has_more Schema",
+258       "default": false,
+259       "examples": [
+260         false
+261       ]
+262     },
+263     "quota_max": {
+264       "$id": "#/properties/quota_max",
+265       "type": "integer",
+266       "title": "The Quota_max Schema",
+267       "default": 0,
+268       "examples": [
+269         300
+270       ]
+271     },
+272     "quota_remaining": {
+273       "$id": "#/properties/quota_remaining",
+274       "type": "integer",
+275       "title": "The Quota_remaining Schema",
+276       "default": 0,
+277       "examples": [
+278         140
+279       ]
+280     }
+281   }
+282 }
